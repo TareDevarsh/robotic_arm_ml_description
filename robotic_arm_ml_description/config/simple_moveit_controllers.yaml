@@ -1,0 +1,21 @@
+controller_list:
+  - name: arm_planning_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - base_joint
+      - mid_joint_1
+      - mid_join_2
+      - wrist_joint
+      - hand_flip
+      - claw_1
+  - name: hand_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - claw_1
+      - claw_3
+      - claw_2
+      - claw_4

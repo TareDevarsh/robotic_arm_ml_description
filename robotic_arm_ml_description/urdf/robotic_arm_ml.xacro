@@ -1,0 +1,312 @@
+<?xml version="1.0" ?>
+<robot name="robotic_arm_ml" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robotic_arm_ml_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robotic_arm_ml_description)/urdf/robotic_arm_ml.trans" />
+<xacro:include filename="$(find robotic_arm_ml_description)/urdf/robotic_arm_ml.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.26494575724145875 0.5112241468344755 0.2556334699866963" rpy="0 0 0"/>
+    <mass value="48.24266647917062"/>
+    <inertia ixx="0.994376" iyy="1.201917" izz="0.857059" ixy="0.244477" iyz="-0.021919" ixz="0.033108"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Waist_1_1_1">
+  <inertial>
+    <origin xyz="-0.024565581704929895 0.1447832784660097 0.22567631658809195" rpy="0 0 0"/>
+    <mass value="120.85408661023656"/>
+    <inertia ixx="8.718078" iyy="8.088328" izz="8.985416" ixy="-0.271187" iyz="-1.943235" ixz="-0.499562"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.183453 -0.565156 -0.526" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/Waist_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.183453 -0.565156 -0.526" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/Waist_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_middle_arm_1">
+  <inertial>
+    <origin xyz="0.40246560309467133 0.08187113034220594 0.4250686648477223" rpy="0 0 0"/>
+    <mass value="91.94705403253768"/>
+    <inertia ixx="9.899902" iyy="15.32459" izz="8.276447" ixy="-2.705761" iyz="-2.75879" ixz="-6.656611"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.300699 -0.646813 -0.927348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/base_middle_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.300699 -0.646813 -0.927348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/base_middle_arm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="middleArm_1_1_1">
+  <inertial>
+    <origin xyz="0.18660217665283785 0.2510999535270809 -0.1566854735511416" rpy="0 0 0"/>
+    <mass value="128.89539075986352"/>
+    <inertia ixx="6.106852" iyy="13.581027" izz="11.605685" ixy="-1.655493" iyz="1.107081" ixz="4.944107"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.066203 -0.962098 -1.796025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/middleArm_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.066203 -0.962098 -1.796025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/middleArm_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="miniGrip1_1_1_1">
+  <inertial>
+    <origin xyz="0.19048555631205333 0.031018855670965184 -0.0633085747365163" rpy="0 0 0"/>
+    <mass value="33.61876172140893"/>
+    <inertia ixx="0.541752" iyy="0.797556" izz="0.63983" ixy="-0.041096" iyz="0.034024" ixz="0.111115"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.733156 -1.345584 -1.287229" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/miniGrip1_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.733156 -1.345584 -1.287229" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/miniGrip1_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ServoGripMain_1_1_1">
+  <inertial>
+    <origin xyz="0.25963337198008585 0.10992120682895212 0.05630234992107641" rpy="0 0 0"/>
+    <mass value="24.241737048934002"/>
+    <inertia ixx="0.578632" iyy="0.838836" izz="1.060248" ixy="-0.300112" iyz="-0.069104" ixz="-0.150709"/>
+  </inertial>
+  <visual>
+    <origin xyz="-2.024398 -1.28613 -1.157378" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/ServoGripMain_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-2.024398 -1.28613 -1.157378" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/ServoGripMain_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gear2_1">
+  <inertial>
+    <origin xyz="0.05245047172393358 0.017489245072558113 0.023866764379942174" rpy="0 0 0"/>
+    <mass value="20.19894966072849"/>
+    <inertia ixx="0.130076" iyy="0.233485" izz="0.345835" ixy="-0.095367" iyz="-0.026943" ixz="-0.01914"/>
+  </inertial>
+  <visual>
+    <origin xyz="-2.348703 -1.510794 -1.36249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/gear2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-2.348703 -1.510794 -1.36249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/gear2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gear1_1">
+  <inertial>
+    <origin xyz="0.055965803200417774 0.0012460645258820513 0.019884393318024385" rpy="0 0 0"/>
+    <mass value="20.74572403474325"/>
+    <inertia ixx="0.070609" iyy="0.290152" izz="0.347769" ixy="0.006718" iyz="-0.014948" ixz="0.006587"/>
+  </inertial>
+  <visual>
+    <origin xyz="-2.417925 -1.25883 -1.287838" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/gear1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-2.417925 -1.25883 -1.287838" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/gear1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="grip_l_1">
+  <inertial>
+    <origin xyz="0.2706683605482607 0.013063963451428906 -0.04532529976955657" rpy="0 0 0"/>
+    <mass value="42.713523097289055"/>
+    <inertia ixx="0.080906" iyy="1.329192" izz="1.356411" ixy="-0.108447" iyz="-0.004939" ixz="-0.003767"/>
+  </inertial>
+  <visual>
+    <origin xyz="-2.615442 -1.658509 -1.393468" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/grip_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-2.615442 -1.658509 -1.393468" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/grip_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="grip_r_1">
+  <inertial>
+    <origin xyz="0.2399947809301035 0.13344999063086305 -0.015700363004030438" rpy="0 0 0"/>
+    <mass value="42.712764988705295"/>
+    <inertia ixx="0.269262" iyy="1.148423" izz="1.348817" ixy="-0.450721" iyz="-0.042607" ixz="-0.08978"/>
+  </inertial>
+  <visual>
+    <origin xyz="-2.725721 -1.256628 -1.281895" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/grip_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-2.725721 -1.256628 -1.281895" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/grip_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Base_1_1_1">
+  <inertial>
+    <origin xyz="-0.46702007999986483 0.5092585509027819 0.39758430195992317" rpy="0 0 0"/>
+    <mass value="113.84818311476913"/>
+    <inertia ixx="15.534832" iyy="15.919459" izz="24.616724" ixy="0.539873" iyz="0.267857" ixz="-0.379704"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.656619 -0.066945 0.214602" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/Base_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.656619 -0.066945 0.214602" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_ml_description/meshes/Base_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="base_joint" type="continuous">
+  <origin xyz="0.183453 0.565156 0.526" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Waist_1_1_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="mid_joint_1" type="revolute">
+  <origin xyz="0.117246 0.081657 0.401348" rpy="0 0 0"/>
+  <parent link="Waist_1_1_1"/>
+  <child link="base_middle_arm_1"/>
+  <axis xyz="0.38083 -0.924645 0.0"/>
+  <limit upper="2.617994" lower="-0.349066" effort="100" velocity="100"/>
+</joint>
+
+<joint name="mid_join_2" type="revolute">
+  <origin xyz="0.765504 0.315285 0.868677" rpy="0 0 0"/>
+  <parent link="base_middle_arm_1"/>
+  <child link="middleArm_1_1_1"/>
+  <axis xyz="-0.380831 0.924645 0.0"/>
+  <limit upper="1.308997" lower="-3.228859" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wrist_joint" type="continuous">
+  <origin xyz="0.666953 0.383486 -0.508796" rpy="0 0 0"/>
+  <parent link="middleArm_1_1_1"/>
+  <child link="miniGrip1_1_1_1"/>
+  <axis xyz="0.799015 0.329018 -0.503311"/>
+</joint>
+
+<joint name="hand_flip" type="revolute">
+  <origin xyz="0.291242 -0.059454 -0.129851" rpy="0 0 0"/>
+  <parent link="miniGrip1_1_1_1"/>
+  <child link="ServoGripMain_1_1_1"/>
+  <axis xyz="0.242022 -0.942125 -0.232006"/>
+  <limit upper="1.22173" lower="-2.617994" effort="100" velocity="100"/>
+</joint>
+
+<joint name="claw_1" type="revolute">
+  <origin xyz="0.324305 0.224664 0.205112" rpy="0 0 0"/>
+  <parent link="ServoGripMain_1_1_1"/>
+  <child link="gear2_1"/>
+  <axis xyz="0.017083 -0.234654 0.971929"/>
+  <limit upper="0.610865" lower="0.174533" effort="100" velocity="100"/>
+</joint>
+
+<joint name="claw_2" type="revolute">
+  <origin xyz="0.393527 -0.0273 0.13046" rpy="0 0 0"/>
+  <parent link="ServoGripMain_1_1_1"/>
+  <child link="gear1_1"/>
+  <axis xyz="0.017079 -0.234941 0.97186"/>
+  <limit upper="0.890118" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="claw_3" type="continuous">
+  <origin xyz="0.266739 0.147715 0.030978" rpy="0 0 0"/>
+  <parent link="gear2_1"/>
+  <child link="grip_l_1"/>
+  <axis xyz="-0.017057 0.234634 -0.971934"/>
+</joint>
+
+<joint name="claw_4" type="continuous">
+  <origin xyz="0.307796 -0.002202 -0.005943" rpy="0 0 0"/>
+  <parent link="gear1_1"/>
+  <child link="grip_r_1"/>
+  <axis xyz="-0.017114 0.23491 -0.971867"/>
+</joint>
+
+<joint name="baseto_base_link" type="fixed">
+  <origin xyz="0.656619 0.066945 -0.214602" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Base_1_1_1"/>
+</joint>
+
+</robot>

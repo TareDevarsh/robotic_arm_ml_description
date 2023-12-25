@@ -1,0 +1,43 @@
+robotic_arm_ml_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  mid_joint_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: mid_joint_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  mid_join_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: mid_join_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  wrist_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: wrist_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hand_flip_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hand_flip
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  claw_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: claw_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  claw_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: claw_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  claw_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: claw_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  claw_4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: claw_4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
